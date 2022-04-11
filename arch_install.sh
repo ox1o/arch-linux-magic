@@ -63,7 +63,7 @@ pacman -S --noconfirm xorg-server xorg-xinit xorg-xkill xorg-xsetroot xorg-xback
      dosfstools ntfs-3g git sxhkd zsh pipewire pipewire-pulse \
      emacs-nox arc-gtk-theme rsync qutebrowser dash \
      xcompmgr libnotify dunst slock jq aria2 cowsay \
-     dhcpcd connman wpa_supplicant rsync pamixer mpd ncmpcpp \
+     networkmanager connman wpa_supplicant rsync pamixer mpd ncmpcpp \
      zsh-syntax-highlighting xdg-user-dirs libconfig \
      bluez bluez-utils
 
@@ -109,6 +109,13 @@ sudo make -C ~/.local/src/pinentry-dmenu clean install
 git clone --depth=1 https://github.com/bugswriter/dwmblocks.git ~/.local/src/dwmblocks
 sudo make -C ~/.local/src/dwmblocks install
 
+
+#git clone --depth=1  https://aur.archlinux.org/paru.git ~/.local/src/paru
+#cd ~/.local/src/paru
+#makepkg -si
+#paru -S libxft-bgra-git yt-dlp-drop-in
+
+
 # pikaur: AUR helper
 git clone https://aur.archlinux.org/pikaur.git
 cd pikaur
@@ -116,6 +123,7 @@ makepkg -fsri
 cd
 pikaur -S libxft-bgra-git yt-dlp-drop-in
 mkdir dl dox imp music pix pub code
+
 
 ln -s ~/.config/x11/xinitrc .xinitrc
 ln -s ~/.config/shell/profile .zprofile
